@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave a Review | Good Day Cafe, Mosgiel</title>
+<meta name="description" content="Tell us how we did at Good Day Cafe in Mosgiel — your feedback helps our wee cafe keep pouring good coffee.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23c65d3b'/%3E%3Ctext x='50%25' y='55%25' font-family='Georgia,serif' font-size='22' fill='white' text-anchor='middle' dominant-baseline='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.stars-pick{display:flex;justify-content:center;gap:10px;margin:30px 0 8px}
+.stars-pick button{background:none;border:none;font-size:2.8rem;cursor:pointer;color:#d9cbb6;transition:transform .15s,color .2s;line-height:1;padding:0}
+.stars-pick button:hover{transform:scale(1.15)}
+.stars-pick button.lit{color:var(--gold)}
+.rate-card{max-width:600px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:48px 40px;text-align:center;box-shadow:var(--shadow-soft)}
+.rate-hint{color:var(--muted);font-size:.95rem;min-height:1.4em}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem;margin-top:34px}
+.back:hover{color:var(--accent-deep)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html"><span class="brand__mark">G</span><span>Good Day Cafe<small>Mosgiel</small></span></a>
+    <div class="nav__cta"><a class="btn btn--primary" href="index.html">Back to site</a></div>
+  </div>
+</header>
+
+<section class="subhero">
+  <div class="wrap">
+    <span class="eyebrow hero__eyebrow" style="justify-content:center;display:inline-flex">Your feedback</span>
+    <h1>How was your Good Day?</h1>
+    <p>Tap a star below. We read every bit of feedback and it genuinely helps our little Mosgiel cafe.</p>
+  </div>
+</section>
+
+<section class="section section--bone">
+  <div class="wrap">
+    <div class="rate-card reveal in">
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Rate your visit</h2>
+      <p class="rate-hint" id="hint">Choose from 1 to 5 stars</p>
+      <div class="stars-pick" id="stars">
+        <button data-v="1" aria-label="1 star">★</button>
+        <button data-v="2" aria-label="2 stars">★</button>
+        <button data-v="3" aria-label="3 stars">★</button>
+        <button data-v="4" aria-label="4 stars">★</button>
+        <button data-v="5" aria-label="5 stars">★</button>
+      </div>
+      <p style="color:var(--muted);font-size:.86rem;margin-top:18px">Loved it? You'll head to Google. Something off? Tell us privately so we can put it right.</p>
+      <a class="back" href="index.html">← Back to Good Day Cafe</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// 4-5 stars -> Google review; 1-3 -> private feedback
+var GOOGLE_REVIEW_URL="https://g.page/r/PLACEHOLDER/review";
+var stars=document.querySelectorAll('#stars button');
+var hint=document.getElementById('hint');
+var msgs={1:"Sorry to hear that — let's make it right.",2:"We'd like to know what let you down.",3:"Thanks — tell us how we can do better.",4:"Great! Share it on Google?",5:"Wonderful! Share the love on Google?"};
+stars.forEach(function(btn){
+  var v=+btn.dataset.v;
+  btn.addEventListener('mouseenter',function(){paint(v)});
+  btn.addEventListener('focus',function(){paint(v)});
+  btn.addEventListener('click',function(){
+    if(v>=4){window.location.href=GOOGLE_REVIEW_URL;}
+    else{window.location.href="private.html?rating="+v;}
+  });
+});
+document.getElementById('stars').addEventListener('mouseleave',function(){paint(0);hint.textContent="Choose from 1 to 5 stars";});
+function paint(v){stars.forEach(function(b){b.classList.toggle('lit',+b.dataset.v<=v)});if(v)hint.textContent=msgs[v];}
+</script>
+</body>
+</html>
