@@ -9,7 +9,7 @@
 <meta property="og:title" content="Good Day Cafe | Cafe &amp; Coffee, Mosgiel">
 <meta property="og:description" content="Proper coffee, all-day brunch and fresh baking in the heart of Mosgiel.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=70">
+<meta property="og:image" content="https://good-day-cafe-mosgiel-demo.vercel.app/images/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,9 +30,9 @@
 <!-- Nav -->
 <header class="nav">
   <div class="wrap nav__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark">G</span>
-      <span>Good Day Cafe<small>Mosgiel</small></span>
+    <a class="brand" href="index.html" aria-label="Good Day Cafe Mosgiel">
+      <img class="brand__img" src="images/logo.png" alt="Good Day Cafe">
+      <span class="brand__town">Mosgiel</span>
     </a>
     <nav class="nav__links">
       <a href="#menu">Menu</a>
@@ -51,24 +51,24 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero__slides" id="heroSlides">
-    <div class="hero__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1900&q=70')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1900&q=70')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1900&q=70')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1900&q=70')"></div>
+    <div class="hero__slide is-active" style="background-image:url('images/hero.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/breakfast-food.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/loaded-waffle.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/sign-plants.webp')"></div>
   </div>
   <div class="hero__scrim"></div>
   <div class="wrap hero__inner">
-    <span class="eyebrow hero__eyebrow">Mosgiel &middot; Cafe &amp; Coffee Roasters</span>
+    <span class="eyebrow hero__eyebrow">Mosgiel &middot; Coffee, Croffles &amp; Cabinet Food</span>
     <h1>Good coffee and a proper feed, right here on the Taieri.</h1>
-    <p>All-day brunch, fresh baking and a flat white worth stopping for — a warm, unhurried corner in the middle of Mosgiel for locals and travellers alike.</p>
+    <p>Coffee, croffles, all-day brunch and cabinet food worth stopping for — a warm, unhurried corner on Gordon Road, open daily from 7am for locals and travellers alike.</p>
     <div class="hero__actions">
       <a class="btn btn--primary btn--lg" href="#menu">View the Menu</a>
       <a class="btn btn--onDark btn--lg" href="tel:+642040505500">Call the Cafe</a>
     </div>
     <div class="hero__meta">
-      <div><span>Where</span><strong>Central Mosgiel</strong></div>
-      <div><span>Open</span><strong>7 days &middot; from 7am</strong></div>
-      <div><span>Known for</span><strong>Coffee &amp; brunch</strong></div>
+      <div><span>Where</span><strong>102 Gordon Road</strong></div>
+      <div><span>Open</span><strong>Daily &middot; from 7am</strong></div>
+      <div><span>Known for</span><strong>Coffee, croffles &amp; brunch</strong></div>
     </div>
   </div>
 </section>
@@ -116,6 +116,11 @@
         <p>Scones, slices, cabinet pies and cakes baked in-house — the cabinet fills up each morning and moves fast, so get in early.</p>
       </div>
       <div class="svc reveal">
+        <div class="svc__ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <h3>Croffles &amp; Sweet Treats</h3>
+        <p>Our signature croffles — that crisp croissant-waffle crossover — piled with sweet or savoury toppings, plus loaded waffles, brownies and danishes from the cabinet.</p>
+      </div>
+      <div class="svc reveal">
         <div class="svc__ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M4 11l1 8h14l1-8"/></svg></div>
         <h3>Lunch &amp; Light Bites</h3>
         <p>Toasties, fresh salads, filled rolls and the soup of the day — quick, hearty options whether you're dining in or grabbing takeaway.</p>
@@ -138,7 +143,7 @@
 <section class="section section--bone" id="about">
   <div class="wrap about">
     <div class="about__media reveal">
-      <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=70" width="1000" height="750" alt="Warm cafe interior with timber tables and morning light" loading="lazy">
+      <img src="images/seating.webp" width="1000" height="750" alt="Warm interior seating at Good Day Cafe Mosgiel" loading="lazy">
       <div class="about__tag"><strong>7am</strong><span>Open daily</span></div>
     </div>
     <div class="about__body reveal">
@@ -164,12 +169,14 @@
       <p>Coffee, kai and the corner we call home in Mosgiel.</p>
     </div>
     <div class="gallery reveal">
-      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=70" alt="Barista pouring latte art into a takeaway cup" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&q=70" alt="Brunch plate of avocado toast with poached eggs" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=70" alt="Cabinet full of fresh baking and pastries" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=70" alt="Cup of coffee with a heart in the crema" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=70" alt="Friends sharing coffee at a cafe table" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=70" alt="Freshly roasted coffee beans" loading="lazy">
+      <img src="images/coffee.webp" alt="Flat white with latte art at Good Day Cafe" loading="lazy">
+      <img src="images/breakfast.jpg" alt="Breakfast plate at Good Day Cafe Mosgiel" loading="lazy">
+      <img src="images/loaded-waffle.jpg" alt="Loaded waffle" loading="lazy">
+      <img src="images/coffee-hotchoc.webp" alt="Coffee and hot chocolate" loading="lazy">
+      <img src="images/brownie-icecream.jpg" alt="Warm brownie with ice cream" loading="lazy">
+      <img src="images/danish.webp" alt="Fresh danish pastry" loading="lazy">
+      <img src="images/sweet-treats.jpg" alt="Sweet treats from the cabinet" loading="lazy">
+      <img src="images/alley.webp" alt="Good Day Cafe alley entrance and seating in Mosgiel" loading="lazy">
     </div>
   </div>
 </section>
@@ -255,7 +262,7 @@
       <div class="contact__card reveal">
         <div class="contact__row">
           <div class="contact__ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><span>Find us</span><strong>Central Mosgiel, Otago</strong></div>
+          <div><span>Find us</span><strong>102 Gordon Road, Mosgiel</strong></div>
         </div>
         <div class="contact__row">
           <div class="contact__ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
@@ -263,11 +270,11 @@
         </div>
         <div class="contact__row">
           <div class="contact__ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-          <div><span>Email</span><strong>Send us a message</strong></div>
+          <div><span>Email</span><strong>gooddaycafemosgiel@gmail.com</strong></div>
         </div>
         <div class="contact__actions">
           <a class="btn btn--primary btn--lg" href="tel:+642040505500">Call Good Day Cafe</a>
-          <a class="btn btn--ghost btn--lg" href="mailto:">Email Good Day Cafe</a>
+          <a class="btn btn--ghost btn--lg" href="mailto:gooddaycafemosgiel@gmail.com">Email Good Day Cafe</a>
         </div>
       </div>
       <div class="contact__card reveal">
@@ -295,7 +302,7 @@
     <div class="footer__top">
       <div>
         <a class="brand" href="index.html"><span class="brand__mark">G</span><span style="color:#fdf8f1">Good Day Cafe<small>Mosgiel</small></span></a>
-        <p>Proper coffee, all-day brunch and fresh baking in the heart of Mosgiel. Good to see you.</p>
+        <p>Coffee, croffles, all-day brunch and fresh baking at 102 Gordon Road, Mosgiel. Open daily from 7am — good to see you.</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -311,7 +318,7 @@
         <h4>Get in touch</h4>
         <ul>
           <li><a href="tel:+642040505500">+64 20 4050 5500</a></li>
-          <li><a href="mailto:">Email us</a></li>
+          <li><a href="mailto:gooddaycafemosgiel@gmail.com">gooddaycafemosgiel@gmail.com</a></li>
           <li><a href="#visit">Opening hours</a></li>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
